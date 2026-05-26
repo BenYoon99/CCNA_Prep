@@ -1,0 +1,103 @@
+20250526 ccna d2 배운것
+
+
+
+라우터와 스위치에서
+
+
+
+핀선 
+
+8선중
+
+총 4선사용 나머지 4선은
+전류때문에 나둠
+
+
+라우터의 송신은 12
+
+수신은 36
+
+
+스위치의 송신은 12
+
+수신은 36
+
+여기서
+
+라우터 -----------라우터나
+
+
+스위치 ----------스위치는
+
+같은 송수신선을 사용하기에
+
+같이 사용할수없어 보이지만
+
+
+여기에 auto d 사용해주면
+
+자동으로 핀선의 위치를 바꾸어주어 송수신가능해짐
+
+혹은 교차 케이블인
+
+crossover cable 사용해주면
+
+
+12 ---------------------12
+ 
+인데
+
+
+12-------------------36으로 
+
+교차 연결이됨
+
+여기서 알아야하는건
+
+과거의 디바이스들 ( 낡은것들)은
+
+auto d 지원이 안됨 고로 거기서는 동일한 스위치 스위치 연결이 힘들고
+크로스오버 케이블 사용해야함 거기서는 스트레이트 스루 케이블 사용불가능함.
+
+그리고 
+
+배운게
+
+fiber cable 배웟는데
+
+우리가 기존에 사용하는건 
+
+utp cable
+
+utp
+
+Unshielded twisted pair
+
+utp의 특징은
+
+짧은거리 송수신이 가능하고  최대 지원거리 100m
+
+송수신간에 케이블 밖으로 작은 신호를 배출하기에 외부의 데이터 조작 및 데이터공격에 취약함
+고로 안정성 security 가 낮다.
+
+그 에 반해
+
+fiber cable은 가격이 비싸지만 최대 지원거리가 멀다 
+최대지원거리 3km 이내는 multimode fiber cable이고
+3km 이상은 singlemode fiber cable이다
+
+singlemode fiber cable은 더 expensive하지만 장거리에 지원이 가능하다 
+
+
+일반적인 스위치에서 연결되는 핀선은 utp이다 
+
+섬유 케이블인 fiber cable들은 사파픽에 가까우며
+특정 장거리 수송신이나 보안이 중요한 상황에서 주로 사용된다
+하지만 가성비가 떨어진다 ( 더 비싸기떄문이다 utp 보다 ) 
+
+
+
+doublemode fiber cable allows 550m which is more than utp supports which is 100m
+
+but if you want it more than 550m than you should use singlemode fiber cable.
