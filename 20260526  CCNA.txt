@@ -1,0 +1,187 @@
+20260526  CCNA
+
+
+
+스위치와 라우터에서
+
+
+
+라우터는 8개의 케이블선중 
+
+
+
+12로 transmit  tx
+
+
+36으로 receive rx
+
+
+
+d2 퀴즈
+
+
+1. 
+because they both use
+
+1 2 to transmit
+
+and 3 6 to receive 
+
+a
+
+2.
+
+b
+
+a cannot be used because its limited
+to 100m
+이유는 맞고 
+
+
+오답
+
+c 
+multimode  is cheaper than single mode 
+and alos supports distances over 150m
+
+3. 
+
+c
+
+오답
+
+multimode is cheaper than single mode but dont supports distances over 3km
+but single mode cable lengths are much longer than 3km
+
+4.
+a
+
+auto mdix automatically supports and fix
+the structure.
+mdi x 쓴다고해서 속도 감속되는거아니다
+이거 기억하자
+
+5.
+
+a
+
+대부분의 호스트는 fiber cabling 안됨
+
+고로 걍
+
+utp 가 디폴트이지만
+ 
+거리가 짧음
+그리고 보안이약함
+
+그래서 거리가 멀고 보안이 중요한경우에 
+
+fiber cable 씀 
+
+약간 사파픽느낌임 
+
+
+utp와 fiber cable과의 차이는
+
+utp는 rj-45포트에 직접 삽입하지만
+
+fiber cable은 sfp 포트에 
+sfp trasceiver이라는 변환장치에 장착한후 삽입한다. 
+
+utp는 쉴드가없기에
+emi ( electromagnatic interference에 ㅈㄴ 취약함
+근데 twisted된 구조가 최소한의 방어는 해준다.
+
+
+PDU == data + 해당 layer's header
+
+
+
+
+please do not throw sausauge pizza away
+
+
+
+PDU
+
+data link -> frame
+
+network  -> packet
+
+transport -> segment ( TCP ) datagram ( UDP)
+
+UDP stands for user datagram protocol
+
+
+
+independency between layers are important concept
+
+한 계층에서 어떠한 ㅈㄹ을 하더라도
+다른 계층에 영향을 절대로 주지않는다
+이러한 계층적 독립성은 
+TCP /IP 뿐만이아닌 OSI 7 계층에서도
+적용되는 사항이고
+
+TCP IP는 OSI 이전에 나온거라는것도 이해해야한다.
+
+
+all tech nerds drink pepsi
+
+
+application 
+
+transport
+
+network
+
+data link
+
+physical 
+
+all tech nerds drink pepsi , pdu는 해당 데이터 + 해당 레이여 헤더지 
+그리고 다음 레이여가면
+해당 데이터 + 이전레이여헤더가 묶여서 데이터고 + 해당 레이여 헤더고
+이 온묶음이 그 레이여 pduㅇ이지?
+
+ㅇㅇ 맞음
+
+고로 
+
+transport  (여기TCP 헤더 + 데이터 원본 )  이 묶음이 세그멘트
+
+network TCP+원본데이터값)==세그멘트 + 여기 레이여 헤더인 IP 헤더 )) == packet
+
+
+
+
+datalink 패킷 + MAC헤더 == 프레임 frame 
+
+이런느낌까지는 이해했는데 아직 완벽히 OSI 7계층의 모든게 어떤역할하는지 그리고 TCP IP 5계층이 어떤역할하는지 확실히 알지는않음 지금 d3 끝남
+
+피지컬은 물리신호 비트보내는곳이고
+
+데이터링크는 프레임이 pdu인 계층
+
+네트워크계층은 라우터이용 ip 보고 경로최적화 
+
+트랜스포트는 전송계층 포트단위이용하고 udp tcp 이용하는곳 pdu는 데이터그램 그리고 세그먼트 
+
+세션계층은 몰라
+
+프레젠테이션도몰라
+
+어플리케이션은 적용계층 실질 개발자가 만지는곳으로만알아 나머지모름
+
+그리고
+
+각각 pdu 알고
+
+캡슐레이션은 데이터전송시 아래로 내려가면서 각 계층의 헤더를 덮어 PDU 제작되고 그걸 그대로 내려서 선물보따리싸기이고
+
+T 계층 N 계층 D 계층에서 사용되는게아니라
+모든계층에서 진행됨
+
+그걸 열어보는사람입장에선 역캡슐화로 비트로 수신후 1계층부터 다시 역으로 캡슐을 뜯어봄 
+
+
+
