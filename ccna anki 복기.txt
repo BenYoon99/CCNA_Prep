@@ -1,0 +1,83 @@
+ccna anki 복기 
+
+
+utp supports 100m
+
+singlemode cable supports the longest even longer than multimode fiber cable
+
+utp is less secure than fiber cuz they leak the signal while transmitting electronics 
+
+which is vulnerable to EMI which is electromagnatic attack but the twisted structure makes it safe at some point.
+
+
+fiber supports longer distance than utp 
+
+utp stands for unshielded twisted pair
+
+all those cables are a device that send electrical signals which means this acts on physical layer
+
+osi 7 and tcp/ip
+
+nowadays in real workplace people use tcp ip 
+and that ratio is 100%
+
+Osi 7 == please do not throw sausage pizza away 
+
+
+tcp ip == all tech nerds drink pepsi
+
+
+you can easily think that tcp ip == just make all session layer and presentation layer and application layer into one application layer.
+
+
+router use 12 pin to transmit tx
+
+36 to receive rx
+
+switch is the opposite because they are the ones whos usually receiving and connecting with router
+
+so they use 36 to transmit tx
+
+when the same devices are on the network connection they need to use crossover cable or they need auto dmax to allocate the pins 12's function in to receiver / transmitter as they need.
+so if the device is not old enough to not have auto dmax then they can just use straight through cable even though they are the same device which is having network connection.
+
+
+12 to receive rx
+
+and firewall 12 tx
+
+36 rx
+
+firewalls are the ones located in the outside of router or inside the router to protect the endhosts
+
+end hosts is 네트워크의 끝과 끝
+
+for example client and server they are both end host
+
+
+host is resident of network environment 
+
+and ip is their address
+
+
+we do encapsulation  and ecapsulation
+
+and pdu is a header for that layer + data and upper header 
+
+
+transport    degree is port and pdu is segment for TCP and datagram for UDP udp stands for user Datagram protocol
+
+network      degree is IP and PDu is packet
+
+datalink       PDU is frame
+
+
+protocol is a law of the network transmission
+
+like a language
+
+and ethernet is a dominant protocol that we use nowadays over 95% 
+
+
+
+AUTO MDIX
