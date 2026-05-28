@@ -1,0 +1,466 @@
+20260528 CCNA 
+
+
+Switch has more interface than router
+
+
+in this case (CCNA ) you have to know that interface is not different with port.
+ 
+
+switch is a device that allows all the devices in one area to have a digitalcommunication with other devices
+thus it needs a lot of port ( interface) to connect with all those devices.
+
+Unlike switch , router is a route optimizing device that only has to do the optimizing , so it only needs few ports.
+
+
+cisco isr is a router
+
+integrated services router 
+
+
+원래는 라우터는 라우팅 즉 경로최적화만을 위해만들어진것이지만
+
+isr은 말그대로
+통합된 서비스 즉 
+
+방화벽의 역할과 라우팅그리고 보이스 그리고 스위칭까지 전부 통합된서비스를 제공하는 거임 
+
+
+
+암기사항
+
+cisco isr asr 
+
+둘다 라우터
+
+r ㅇㅇ
+
+isr for 중소기업
+
+asr for 대기업
+
+cisco catalyst nexus 스위치
+
+isr이 아무리 통합된 서비스를 제공한다고해도
+
+과부하문제가 있기에 firewall은 그대로 사용한다
+
+isr 's firewall function is like a tall wall 
+
+but we still need soldiers ( firewall itself)
+
+
+광섬유 fiber cable의 전기신호변환기는 SPF 
+
+
+
+이패기텐 
+이더넷 
+패스트이더넷  
+기가비트 이더넷
+텐 기가비트 이더넷  맞지?
+
+
+이더넷 10mbps 
+
+패스트 이더넷 100 mbps
+
+기가비트 이더넷 1000mbps == 1gbps
+
+텐 기가비트 이더넷 10000mbps== 10gbps
+
+full duplex == 양방향송신
+
+========= 이러한 차선인데 둘다 오고갈수있음 전기신호를 서로 주고받는거임
+
+예시로는 스위치 
+
+
+
+김말이같은 fiber cable은 두가지가잇지
+
+멀티모드와
+
+
+싱글모드 
+
+멀티모드의 코어 즉 구멍의 크기가 싱글모드보다 더 넓다
+
+여기서 파이버캐이블은 빛이 오고가는 유리관이라고 보는게 편함
+
+빛이 실제로가는 그 구멍은 코어라 부르고
+클래딩은 그 겉면을 말하는거야 
+
+
+RJ 45 == 저번에 실습때만든 랜선
+
+
+cli command line interface는 그니까 
+막 config치는그 프롬프트창처럼 딱딱한 검정색그런 내가 입력창인터페이스고
+gui graphical user interface는
+지금 이 제미나이나 이런창처럼 
+부드러운 프론트엔드 접목된 인터페이스인가?
+
+<<-- 완벽한 이해
+
+
+
+cisco cli에서의
+
+두가지
+
+첫번째가 
+user EXEC ( execute  ) mode 
+
+preveilige EXEC mode
+맞지?
+이거두개 암기하고 뭘 더암기해야하지 여기서'
+
+
+
+
+그럼 ip config나 ping 8888 help등 조회로는 아무런 running config를 바꾸지못하는거지
+
+ㅇㅇ
+
+그니까 기본값은 startup config인데
+그럼 관리자 모드가아닌 방문자인 user exec에서는 애초에
+바로 conf t 가 안되?
+en 하고 관리자가 되야 가능함?
+그리고 
+startup으로 저장을 running꺼하고싶으면
+write write memory or copy runtime config startup config 
+해야하는데 그럼 이것도 전부 관리자 모드에서만 사용가능한거야? 
+
+ㅇㅇ 맞음
+
+그건 저장본이고
+
+내가 치는건 실시간 running config이고
+
+내가 copy run start 박으면
+
+그 친게 저장되서 startup config에 영향준다고 
+
+
+
+그럼 user exec이 디폴트값 아무것도 못해 
+거기서 en or enable 치면
+프리빌리지드 관리자모드로 넘어가고 여기서는 다양한거 수행가능하고 
+여기 프리빌리지드나 유저 exec모드에서
+conf t 치면 
+글로벌 컨피그모드로 넘어간다는거지?
+거기선 더 다양한 거 수행가능하고
+그럼 프리빌리지드가 수행가능한 것들과 글로벌컨피그에서 가능한게 달라?
+
+
+
+그니까 어떠한것을 수정하거나 변경하려면 conf t로 글로벌 컨피그갇야하고
+그냥 janitor로 show요청해서 상태보고 ping으로 연결 잘되는지 보고
+그냥 그 상태 확인후 아까말한 3가지방법으로 startup에 저장하려면 priviliged exec 에서 하면되는거지 그리고 재부팅 reload도 ㅇㅇ 
+
+
+ㅇㅇ 맞음
+
+
+user EXEC mode == visitor
+
+priviliged EXEC  mode == janitor
+
+conf t ( configuration terminal ) == architect
+
+
+
+
+start up === 기본 정보저장된 db같은거
+
+running config == 현재 프롬프트창 일시적 현재
+
+if we wanna change startup config -> then we have to type 3 prompts in priviliged exec mode 1. write 2. write memory 3. copy running configuration startup configuration.
+
+copy run start 가 copy running configuration startup configuration 줄임말임
+
+
+user exec mode == Router>
+
+priviliged exec mode == Router#
+
+global config -- conf t == Router(config)#
+
+
+
+enable encrypt disable encrypt 들은 왜 enable secret에는 영향을 안줘? 그리고 enable secret은 뭐야?
+그리고 disable encrypt 하려면 no service password encryption 맞지? 
+
+ㅇㅇ맞는데 
+디테일 추가해야함
+
+
+
+
+
+암호화는 그럼 service password-encryption이고 
+비암호화는 no 붙이면되고
+그리고 슬래쉬 - 도 무조건붙여야함?
+그리고 평문으로 보인다는게
+내가 cli 창에서 비밀번호치면 ****이렇게나오는것도아니라 평문으로 그대로 보여?
+뒤에잇는사람이 볼수있게?
+그리고 service encrypt 이거 하면
+내 비밀번호가 babo123 이면 
+이걸 999923D같은 같은 갯수의 숫자  + 영문으로 변환해주는거야 아니면 7자로만 변환해주는거야 ? 
+그리고 enable secret은 그럼 다른 명령어인거야? 더 고급 강화 비번암호화같은거라 
+저거는 별개처리라 생각하면되는거지?
+그리고 no serv encrypt 하면
+추후 내가 만드는 모든 비번도 다 비암호화되고 그냥 평문인거지?
+
+ㅇㅇ 추후 만드는것들도 다 비암호화되고
+
+그리ㅏ고 7자 제한아니고
+10~15자 
+그냥 이름이 type 7 임
+그리고
+enable secret은 별개 맞고
+더 우수하고 최신식이라
+만약 babo123을 serv pass encryption 하고
+enable secret 둘다 했다면
+더 우수한 enable secret을 cisco cli는 인식하고 type7은 그냥 유기때림 없어진거야
+
+
+enable password  babo123 을 글로벌 컨피그에서하면
+babo 123이라는 비번이 적용되는거지 
+그리고 이 비번은 어떤 아이디에 적용되는거야?
+
+아이디라는 개념은 
+없어 ccna cli에 
+en 사용해서 관리자 모드 가려는 상황에
+비번을 묻는거임
+
+
+
+2번방에서 
+
+현재 running configuration  startup configuration에 저장하고싶다면 
+write 
+
+
+
+write memory
+
+copy running configuration startup configuration 
+
+세개 중하나 써라 
+
+마지막꺼 줄임으로 copy run start 쳐도 작동 똑같이됨 
+
+write 는 wr 
+
+write memory는 wr mem
+
+세 역할은 같음
+
+현재 러닝컨피그를 스타트업 컨피그에 저장
+
+
+
+
+
+ㅇㅎ 그럼 visitor 에서 janitor 가려면 비번이 걸리는거네
+그럼 결국 global config도 재니터에서갈수있으니
+그냥 global 쓰고싶어도 비번뚫어야하는거네
+
+3번방 글로벌 컨피그에서 2번방 재니터 커맨드 쓰고싶으면
+
+do ~~~~~ janitor command( priviliged exec mode commands - such as show write write memory copy)
+
+
+
+rollover cable ---> RJ45 console port in CISCO devices 암기
+
+
+console port랑 그냥 포트랑 차이가 있어 ccna에서? 
+rollover cable is used in console port of CISCO device 라는데
+그냥 포트 ( 구멍) 으로 이해해도 무방하지?
+ㄴㄴ
+그럼 시스코 기기의 콘솔포트는 전부 rollover cable 쓰는걸로 이해해도 무방할까
+
+ㅇㅇ
+
+
+
+그리고 포트 자체가 구멍이니까
+그냥 시스코 콘솔 구멍에는 롤오버 이렇게 기억 ?
+그리고 나머지 포트물엊보는것들도 다 구멍으로 기억하면되지
+
+ㅇㅇ
+
+
+시스코 콘솔 포트 -- 롤오버 케이블
+
+나머지 일반 포트들 == 스트레이트 스루 케이블
+
+똑같은 장비끼리의 포트 == 크로스오버 or auto MDIX 잇으면 스트레이트 스루 
+
+
+그럼 오토엠딕스 연결되어있을떄도 크로스오버사용가능함?
+ㅇㅇ
+
+auto-mdix는 연결이 잘되게 자동으로 도와주는거지
+
+연결 잘되있으면 가만히있다 가마니처럼
+'
+
+
+정답 c 
+맞구요ㅕ
+
+CCNA CLI의 비밀번호는 대소문자를 구분하기 때문이쥬
+
+
+정답 a
+
+정답 enable secret 비밀번호만 적용이됩니다.
+
+
+그니까 enable secret babo123 과 enable password babo123 하면 janitor 모드에서 비번이 걸리는건데
+이경우에 babo123은 시크릿껄로만 된다는거지?
+ㅇㅇ survival of the fittest임
+
+강한게 약한거 잡아먹음 시스코에서는
+보안강한거 secret >> 보안 상대적으로 약한 password ㅇㅇ
+덮어버린다생각하면됨 
+
+
+
+잠만 퀴즈푸는데 conf t 가 configure terminal이야 ?
+ configuration terminal이아니라?
+ㅇㅇ configure terminal== conf t
+
+
+janitor의 show run은 비번ㅁ까지도 다보여주는거야? 진 역할이머임? 머야
+
+ㅇㅇ 비번다보여줌 평문으로
+
+근데 시크릿박으면 해쉬로 막 이상하게 써져잇어서 비번못알아냄 show run으로
+
+
+service password encryption은 재니터에서하는건가? 글컨피그에서하는건가
+이거하면 show run해도 password type7로보이지?
+
+ㅇㅇ 맞음 type 7형태의 암호형태로 showrun에서나와서 
+못봄
+그리고 이건 내부 자체 정보 수정이라 관리자가아닌 글컨피그에서 수정가능 
+
+시크릿은 애초에 해쉬 강력한 암호로 덮어버리기떄문에
+굳이 encryption 할필요가 없다. 매우 좋다 그러기에 
+
+
+그니까 이패기텐 속도로 다 비교해봐 
+10mbps 이더넷
+100 mbps 패스트이더넷
+1000mbps = 1gbps =기가비트이더넷
+10000mbps -= 10gbps 텐 기가비트이더넷 
+
+mbps는 뭐약자야
+10 gbps 가 기가비트 퍼세컨드면
+
+
+이 패 기텐
+
+이 패 기텐
+
+메가 비피에스 10부터 시작 0 하나씩 ㅇㅇ 
+
+1000 == 기가비피에스
+
+
+ok 
+그럼 이더넷 랜스위칭에서
+src 가 맥주소를 보내는놈이고
+dest가 destination 목적지주소임?
+
+그럼 플러딩은 이더넷 랜 스위칭에서  맥주소를 보냈는데 수신한 디바이스가 dest mac 주소를 못찾을떄 연결된 모든 포트로 해당 맥주소를 전부 보내는걸 의미함?
+
+플러딩(Flooding)의 정확한 정의
+스위치가 프레임을 받았는데, 그 안에 있는 Dest MAC 주소를 자신의 MAC 주소 테이블(CAM Table)에서 찾을 수 없을 때, 연결된 모든 포트(데이터가 들어온 포트 제외)로 데이터를 전부 뿌리는 현상이야.
+
+
+스위치는 그럼 프레임을 받을때 바로 mac주소와 dest 주소를 mac add table에 기입하는거임?
+
+ㄴㄴ 프레임 송신자인 scr mac address 랑 그 인터페이스 기입함 
+
+OUI는 그럼 기기가 어디사껀지 알수있는 제조사 확인코드인거네
+그리고 MAC 주소 맨앞 3개고?ㅇㅇ
+맞음
+
+Known Unicast: "스위치가 목적지의 위치를 알고 있음." -> CAM 테이블 조회 -> 해당 포트로만 전달(Forwarding). (깔끔함)
+
+Unknown Unicast: "스위치가 목적지의 위치를 모르고 있음." -> 테이블에 없음 -> 모든 포트로 뿌리기(Flooding). (무식하게 찾기)
+
+
+
+그니까너말은 어떠한 형태 ( broad cast multicast)껀 간에 
+dest 주소를 모르는경우여서 경로를 못찾으면
+그 스위치에 포트연결된 모든곳으로 전부 신호를 쏴서 찾아내는거야?
+그ㅓ럼그 쓰레기 프레임받은 다른 놈들은 어떻게해?
+그냥버려버려??
+
+
+Broadcast: 무조건 모든 포트로 플러딩.
+
+Multicast: 해당 그룹에 가입된 그룹 멤버 포트들로만 전달(선별적 전달 or 플러딩).
+
+Unknown Unicast: 목적지 위치를 모르니까 들어온 포트 제외 전체로 플러딩. ( broadcast== 모두 들어라가 목적 - > 모든 포트로 플러딩   / multicast == 특정 그룹만 들어라가 목적 -> 그룹 멤버 포트로 전달)
+
+
+
+f0/1
+
+f == fast ethernet 
+
+1 1번포트(구멍)이라는 소리
+0==
+src mac == source mac address 데이터를 보내는 놈의 물리적 주소 
+
+dest mac == destination mac address  데이터를 받는 놈의 물리적 주소 
+
+f0/1 은 
+0번모듈 1번포트
+fast ethernet  모듈번호 포트번호 
+
+모듈은 스위치에 포트가 모여있는 판떼기를 의미함
+
+
+플러딩(Flooding)의 정확한 정의
+스위치가 프레임을 받았는데, 그 안에 있는 Dest MAC 주소를 자신의 MAC 주소 테이블(CAM Table)에서 찾을 수 없을 때, 연결된 모든 포트(데이터가 들어온 포트 제외)로 데이터를 전부 뿌리는 현상이야.
+
+CCNA에서의 interface == port == 물리적 입구 
+
+이더넷 랜스위칭에서 스위치가 프레임을 받으면 맥테이블에 프레임 송신자인 scr mac add ( source mac address) 랑 그 인터페이스를 기입함.
+
+Ethernet frame that provides receiver clock synchronization == Preamble 
+
+network device physical address ==48bits ==8bytes
+
+OUI = MAC 주소의 앞 절반 (3바이트 =24비트) = 제조사 정보.
+
+Known Unicast: "스위치가 목적지의 위치를 알고 있음." -> CAM 테이블 조회 -> 해당 포트로만 전달(Forwarding). (깔끔함)
+
+Unknown Unicast: "스위치가 목적지의 위치를 모르고 있음." -> 테이블에 없음 -> 모든 포트로 뿌리기(Flooding). (무식하게 찾기)
+
+MAC Address Table = CAM Table 같은말
+
+flooding == 해당 스위치에 프레임이 전달받았을떄 해당 스위치가 destination mac address를 못찾을때 송신한 포트를 제외한 연결된 모든 포트에 프레임을 쏘는것.
+Broadcast (브로드캐스트): 목적지가 '전체(FF:FF:FF:FF:FF:FF)'임. 송신 포트 제외 모든 포트로 플러딩(Flooding).
+
+Unknown Unicast (언노운 유니캐스트): 목적지 위치를 모름. 송신 포트 제외 모든 포트로 플러딩(Flooding).
+
+Multicast (멀티캐스트): * 똑똑한 스위치 (IGMP Snooping ON): 그룹 멤버 포트로만 선별적 전달(Forwarding).
+
+멍청한 스위치 (기능 OFF): 브로드캐스트처럼 송신 포트 제외 모든 포트로 플러딩(Flooding).
+
+멀티캐스트 처리 방식:
+
+기본: 스위치는 멀티캐스트를 받으면 원칙적으로 브로드캐스트와 동일하게 플러딩(Flooding) 처리함.
+
+고급 (IGMP Snooping): 스위치가 멀티캐스트 그룹 정보를 학습하여, **해당 멤버 포트로만 선별적으로 전달(Forwarding)**함. (CCNA 핵심 이론)
+
