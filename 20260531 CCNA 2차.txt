@@ -1,0 +1,18 @@
+20260531 CCNA 2차
+
+
+
+cisco router default status == down 
+
+cisco router default status == up 
+
+after configurtion 
+
+
+status  protocol 둘다 up 되있는걸 기대하자
+
+status 자체가 down 되있는 디폴트값은 
+
+shutdown명령어로 interface가 다운되있는 기본값임
+
+고로 no shutdown으로 시작시 인터페이스 살려주고 시작해야함
