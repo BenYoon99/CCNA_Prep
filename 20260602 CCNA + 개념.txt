@@ -1,0 +1,37 @@
+20260602 CCNA + 개념
+
+
+connected  route
+
+local route
+
+static route configuration
+
+fiber 
+
+
+singlemode <--- 장거리 but 비쌈
+
+
+multimode 단거리 but 상대적저렴
+
+
+스위칭은 브로드캐스트  / 언노운 유니캐스트시 바로 플러딩
+
+라우팅은 그냥 모르는정보시 드랍해버림
+
+스위칭은 내 네트워크내부
+
+라우팅은 네트워크와 다른네트워크
+
+
+라우팅테이블에는 맥주소가아님
+
+캠주소에는 dest 맥주소가 자동입력 지나갈시
+
+
+broadcast and unicast
+
+broadcast 들어온포트말고 전범위
+
+유니캐스트 1:1
